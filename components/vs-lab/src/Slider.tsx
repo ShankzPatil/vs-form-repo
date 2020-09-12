@@ -1,5 +1,5 @@
 import * as React from 'react'
-import Slider, { SliderProps as MuiSliderProps } from '@material-ui/lab/Slider'
+import Slider, { SliderProps as MuiSliderProps } from '@material-ui/core/Slider'
 import { BaseFormControl, ItemProps, ItemDataProps, types } from '@vs-form/vs-form'
 
 export const styles = {

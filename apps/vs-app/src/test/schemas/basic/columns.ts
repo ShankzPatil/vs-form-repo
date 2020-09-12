@@ -100,7 +100,7 @@ const schema: ISchemaDesign = {
         md: 6
       },
       gridContainer: {
-        spacing: 24
+        spacing: 3
       },
     },
     checkRows: {

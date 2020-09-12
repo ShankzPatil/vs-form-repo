@@ -83,10 +83,10 @@ class Element extends React.Component<ItemProps, ItemState> {
         </this.WrapperTooltip>
       )
     } else if (this.state.loading) {
-      return <Text text="loading..."/>
+      return ''// <Text text="loading..."/>
     } else {
       const text = `Component not found: ${this.props.comp.type} ` + (this.props.comp.type === enums.Component.custom ? ' name: ' + this.props.comp.name : '')
-      return <Text text={text}/>
+      return <Text text={text} />
     }
   }
 

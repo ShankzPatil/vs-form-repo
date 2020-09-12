@@ -17,7 +17,7 @@ const card: IRenderedComp = {
     children: [],
     label,
   },
-  renderedNodes: ['VsCard', 'Card', 'Paper', 'CardHeader']
+  renderedNodes: ['VsCard']
 }
 
 const panel: IRenderedComp = {
@@ -26,7 +26,7 @@ const panel: IRenderedComp = {
     children: [],
     label,
   },
-  renderedNodes: ['VsPanelWithLabel', 'Typography']
+  renderedNodes: ['VsPanelWithLabel']
 }
 
 const tabs: IRenderedComp = {
@@ -35,7 +35,7 @@ const tabs: IRenderedComp = {
     tabs: [],
     label,
   },
-  renderedNodes: ['VsTabs', 'Tabs']
+  renderedNodes: ['VsTabs']
 }
 
 export const tab: IRenderedComp = {
@@ -48,11 +48,11 @@ export const tab: IRenderedComp = {
 
 const exp: IRenderedComp = {
   comp: {
-    type: Component.expansionpanel,
+    type: Component.accordion,
     children: [],
     label,
   },
-  renderedNodes: ['VsExpansionPanel', 'ExpansionPanel']
+  renderedNodes: ['VsAccordion']
 }
 
 const text: IRenderedComp = {
@@ -64,7 +64,7 @@ const text: IRenderedComp = {
     },
     label,
   },
-  renderedNodes: ['VsTextInput', 'TextField', 'input']
+  renderedNodes: ['VsTextInput', 'input']
 }
 
 const number: IRenderedComp = {
@@ -76,7 +76,7 @@ const number: IRenderedComp = {
     },
     label,
   },
-  renderedNodes: ['VsNumber', 'TextField', 'input']
+  renderedNodes: ['VsNumber', 'input']
 }
 
 const select: IRenderedComp = {
@@ -89,7 +89,7 @@ const select: IRenderedComp = {
     },
     label,
   },
-  renderedNodes: ['VsSelect', 'TextField', 'input']
+  renderedNodes: ['VsSelect', 'input']
 }
 
 
@@ -102,7 +102,7 @@ const date: IRenderedComp = {
     },
     label,
   },
-  renderedNodes: ['VsDate', 'TextField', 'input']
+  renderedNodes: ['VsDate', 'input']
 }
 
 const radiogroup: IRenderedComp = {
@@ -115,7 +115,7 @@ const radiogroup: IRenderedComp = {
     },
     label,
   },
-  renderedNodes: ['VsRadioGroup', 'RadioGroup', 'Radio']
+  renderedNodes: ['VsRadioGroup']
 }
 
 const checkbox: IRenderedComp = {
@@ -127,7 +127,7 @@ const checkbox: IRenderedComp = {
     },
     label,
   },
-  renderedNodes: ['VsCheckbox', 'Checkbox', 'input']
+  renderedNodes: ['VsCheckbox', 'input']
 }
 
 const switch1: IRenderedComp = {
@@ -139,7 +139,7 @@ const switch1: IRenderedComp = {
     },
     label,
   },
-  renderedNodes: ['VsSwitch', 'Switch', 'input']
+  renderedNodes: ['VsSwitch', 'input']
 }
 
 const checklistbox: IRenderedComp = {
@@ -168,7 +168,7 @@ const button: IRenderedComp = {
     type: Component.button,
     label,
   },
-  renderedNodes: ['VsButton', 'Button']
+  renderedNodes: ['VsButton']
 }
 
 const iconbutton: IRenderedComp = {
@@ -176,7 +176,7 @@ const iconbutton: IRenderedComp = {
     type: Component.iconbutton,
     icon: 'tractor',
   },
-  renderedNodes: ['VsIconButton', 'Icon']
+  renderedNodes: ['VsIconButton']
 }
 
 const icon: IRenderedComp = {
@@ -184,7 +184,7 @@ const icon: IRenderedComp = {
     type: Component.icon,
     icon: 'tractor',
   },
-  renderedNodes: ['VsIcon', 'Icon']
+  renderedNodes: ['VsIcon']
 }
 
 const svgicon: IRenderedComp = {
@@ -192,7 +192,7 @@ const svgicon: IRenderedComp = {
     type: Component.icon,
     svg: 'M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z'
   },
-  renderedNodes: ['VsIcon', 'SvgIcon', 'svg']
+  renderedNodes: ['VsIcon', 'svg']
 }
 
 const mediastatic: IRenderedComp = {

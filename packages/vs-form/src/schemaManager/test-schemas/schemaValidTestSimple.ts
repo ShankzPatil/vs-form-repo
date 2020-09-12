@@ -173,7 +173,7 @@ export const schemaCorrectSimple: types.ISchemaDesign = {
       },
     },
     exp1: {
-      type: enums.Component.expansionpanel,
+      type: enums.Component.accordion,
       label: 'Exp',
       children: ['expText1', 'expText2']
     },
@@ -200,7 +200,7 @@ export const schemaCorrectSimple: types.ISchemaDesign = {
       label: 'TextExp2',
     },
     exp2: {
-      type: enums.Component.expansionpanel,
+      type: enums.Component.accordion,
       label: 'Exp2',
       children: ['expText3']
     },

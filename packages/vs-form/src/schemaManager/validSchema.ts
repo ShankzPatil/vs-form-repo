@@ -300,7 +300,7 @@ const _validSchemaComponents = () => ({
     subheader: { ...typeString() },
     ...commonProps(),
   },
-  [enums.Component.expansionpanel]: {
+  [enums.Component.accordion]: {
     ...commonContainerProps(),
     expanded: { ...typeBoolean() },
     onBeforeChange: { ...typeFunction() },

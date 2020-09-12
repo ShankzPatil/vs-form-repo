@@ -37,6 +37,7 @@ export default class VsSwitch extends React.Component<ItemProps> {
   public renderComp = (dataProps: ItemDataProps) => {
     return (
       <FormControlLabel
+        // tslint:disable-next-line: jsx-wrap-multiline
         control={<Switch
           checked={dataProps.state.value}
           onChange={this.changeValue(dataProps)}

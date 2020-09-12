@@ -1,13 +1,13 @@
 {
-  "name": "@vs-form/vs-form",
-  "version": "0.7.17",
-  "description": "A schema-based form generator component for React using material-ui",
+  "name": "vs-form-mui-4x",
+  "version": "4.1.2",
+  "description": "A schema-based form generator component for React using material-ui 4.x",
   "main": "dist/index.js",
   "module": "dist/es/index.js",
   "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/vs-form/vs-form-repo"
+    "url": "https://github.com/ShankzPatil/vs-form-repo"
   },
   "files": [
     "dist"
@@ -38,7 +38,7 @@
     "Form-Generator"
   ],
   "devDependencies": {
-    "@material-ui/lab": "^3.0.0-alpha.30",
+    "@material-ui/lab": "^4.0.0-alpha.56",
     "@types/react-text-mask": "^5.4.4",
     "jest": "^23.6.0",
     "react-number-format": "^4.0.7",
@@ -47,7 +47,7 @@
     "ts-node": "^8.0.3"
   },
   "peerDependencies": {
-    "@material-ui/core": "3.x",
+    "@material-ui/core": "^4.11.0",
     "react": "16.x",
     "react-dom": "16.x"
   },

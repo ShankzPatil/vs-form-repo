@@ -14,7 +14,7 @@ import {
   IValidationErrorList, IComponentEventParams,
   IProcessSchemaParams, ISchemaCallback,
   IComponentCallback, IComponentTextInput, IComponentSubschema, ISubschemaArrayProps,
-  IComponentExpansionPanel,
+  IComponentAccordion,
 } from './types'
 
 import * as errstrings from './str_err'
@@ -168,7 +168,7 @@ export default class SchemaManager extends EventEmitter {
     let parent = this.getParentComponent(comp)
     let doRender = false
     while (parent && parent.id !== 'root') {
-      if (parent.type === enums.Component.expansionpanel && !parent.expanded) {
+      if (parent.type === enums.Component.accordion && !parent.expanded) {
         this.changeExpanded(parent, true, false)
         doRender = true
       } else if (parent.type === enums.Component.tab) {
@@ -706,11 +706,11 @@ export default class SchemaManager extends EventEmitter {
     return get(this.schema.values, field)
   }
 
-  public changeExpanded(comp: IComponentExpansionPanel, expanded: boolean, designMode: boolean): void {
+  public changeExpanded(comp: IComponentAccordion, expanded: boolean, designMode: boolean): void {
     comp.expanded = expanded
     if (designMode) {
       const schema = this.getOrigSchemaFromComponentId(comp.id!)
-      const orig = schema ? schema.components[comp.node!] as IComponentExpansionPanel : undefined
+      const orig = schema ? schema.components[comp.node!] as IComponentAccordion : undefined
       if (orig) {
         orig.expanded = expanded
       }
@@ -735,7 +735,7 @@ export default class SchemaManager extends EventEmitter {
   public resolvePropertyFunctions(component: IComponent): void {
     const params = this.getComponentEventParams(component)
     const schema = this.getOrigSchemaFromComponentId(component.id!)
-    const orig = schema ? schema.components[component.node!] as IComponentExpansionPanel : undefined
+    const orig = schema ? schema.components[component.node!] as IComponentAccordion : undefined
     if (orig) {
       const props = ['label', 'hint', 'tooltip', 'placeholder', 'text', 'data.items']
       props.forEach(prop => {

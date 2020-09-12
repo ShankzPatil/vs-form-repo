@@ -125,7 +125,7 @@ const schema: ISchemaDesign = {
       icon: 'tractor'
     },
     cardExt: {
-      type: Component.expansionpanel,
+      type: Component.accordion,
       label: 'Extended Select',
       children: ['select10', 'select101', 'select11', 'select12', 'select121', 'input12', 'select13']
     },

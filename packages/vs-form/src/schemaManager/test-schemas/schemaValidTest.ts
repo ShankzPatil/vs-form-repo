@@ -901,7 +901,7 @@ export const schemaErrorType = {
         alignItems: 'test',
         direction: 'test',
         justify: 'flex-end',
-        spacing: 24,
+        spacing: 3,
         wrap: 'nowrap',
       }
     },
@@ -1320,12 +1320,12 @@ export const schemaCorrectType = {
       },
     },
     pnexp1: {
-      type: enums.Component.expansionpanel,
+      type: enums.Component.accordion,
       label: 'Expand 1',
       children: ['exp1']
     },
     pnexp2: {
-      type: enums.Component.expansionpanel,
+      type: enums.Component.accordion,
       label: 'Expand 2',
       children: ['exp2']
     },

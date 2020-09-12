@@ -1,9 +1,9 @@
 import * as React from 'react'
 // import { withStyles } from '@material-ui/core/styles'
 
-import ExpansionPanel from '@material-ui/core/ExpansionPanel'
-import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary'
-import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails'
+import Accordion from '@material-ui/core/Accordion'
+import AccordionSummary from '@material-ui/core/AccordionSummary'
+import AccordionDetails from '@material-ui/core/AccordionDetails'
 
 import List from '@material-ui/core/List'
 import ListItem from '@material-ui/core/ListItem'
@@ -60,16 +60,16 @@ export default class Sidebar extends React.Component<ISidebarProps> {
   public panel = (p: any) => {
     return (
       <div style={{ width: '100%' }} key={p.title}>
-        <ExpansionPanel style={{ width: '100%' }} defaultExpanded={p.expanded}>
-          <ExpansionPanelSummary expandIcon={<VsIcon icon='chevron-down' />}>
+        <Accordion style={{ width: '100%' }} defaultExpanded={p.expanded}>
+          <AccordionSummary expandIcon={<VsIcon icon='chevron-down' />}>
             <VsText text={p.title} />
-          </ExpansionPanelSummary>
-          <ExpansionPanelDetails style={{ padding: '10px' }}>
+          </AccordionSummary>
+          <AccordionDetails style={{ padding: '10px' }}>
             <List style={{ width: '100%' }}>
               {p.list.map((item: any) => this.listItem(item))}
             </List>
-          </ExpansionPanelDetails>
-        </ExpansionPanel>
+          </AccordionDetails>
+        </Accordion>
       </div >
     )
   }

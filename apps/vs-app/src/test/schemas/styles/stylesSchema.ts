@@ -232,16 +232,16 @@ const schema: ISchemaDesign = {
 
     },
     expPanel1: {
-      type: Component.expansionpanel,
-      label: 'Normal Expansions-Panel',
+      type: Component.accordion,
+      label: 'Normal Accordion',
       children: ['text11'],
     },
     expPanel2: {
-      type: Component.expansionpanel,
+      type: Component.accordion,
       label: 'Change style upon expand',
       children: ['text12'],
       onChange: p => {
-        const comp = p.component as types.IComponentExpansionPanel
+        const comp = p.component as types.IComponentAccordion
         comp.props!.className = classNames({ background: p.expanded })
         comp.props!.TypographyProps = {}
         comp.props!.TypographyProps!.className = classNames({ font: p.expanded })

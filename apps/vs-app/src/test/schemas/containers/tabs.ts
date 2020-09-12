@@ -120,7 +120,7 @@ const schema: ISchemaDesign = {
     curExp: {
       type: Component.text,
       text(p) {
-        const expanded = (p.schema.components.exp as types.IComponentExpansionPanel).expanded
+        const expanded = (p.schema.components.exp as types.IComponentAccordion).expanded
         return 'Panel is: ' + (expanded ? 'expanded' : 'collapsed')
       },
       gridItem: {
@@ -128,7 +128,7 @@ const schema: ISchemaDesign = {
       },
     },
     exp: {
-      type: Component.expansionpanel,
+      type: Component.accordion,
       onBeforeChange(p) {
         if (p.expanded && p.schemaManager.getValue('checkChangeExp') === true) {
           p.canChange = false
@@ -141,7 +141,7 @@ const schema: ISchemaDesign = {
         p.schemaManager.renderComponents([textComp])
       },
       children: ['subSimple3'],
-      label: 'Expansion Panel',
+      label: 'Accordion',
     },
     text1: {
       type: Component.textinput,

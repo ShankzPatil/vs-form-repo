@@ -4,7 +4,7 @@ export enum Component {
   panel = 'panel',
   tabs = 'tabs',
   tab = 'tab',
-  expansionpanel = 'expansionpanel',
+  accordion = 'accordion ',
   form = 'form',
   subschema = 'subschema',
   // fields

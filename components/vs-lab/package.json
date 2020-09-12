@@ -34,12 +34,12 @@
     "ts-node": "^8.0.3"
   },
   "peerDependencies": {
-    "@material-ui/core": "3.x",
+    "@material-ui/core": "4.x",
     "@vs-form/vs-form": "^0.7.0",
     "react": "16.x",
     "react-dom": "16.x"
   },
   "dependencies": {
-    "@material-ui/lab": "^3.0.0-alpha.30"
+    "@material-ui/lab": "^4.0.0-alpha.56"
   }
 }

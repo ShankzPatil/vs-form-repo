@@ -182,7 +182,7 @@ export const gridProps = () => ({
     alignItems: { ...typeString(), enum: ['flex-start', 'center', 'flex-end', 'stretch', 'baseline'] },
     direction: { ...typeString(), enum: ['row', 'row-reverse', 'column', 'column-reverse'] },
     justify: { ...typeString(), enum: ['flex-start', 'center', 'flex-end', 'space-between', 'space-around', 'space-evenly'] },
-    spacing: { ...typeNumber(), enum: [0, 8, 16, 24, 32, 40] },
+    spacing: { ...typeNumber(), enum: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10] },
     wrap: { ...typeString(), enum: ['nowrap', 'wrap', 'wrap-reverse'] },
     zeroMinWidth: { ...typeBoolean() },
     item: { ...typeBoolean() },

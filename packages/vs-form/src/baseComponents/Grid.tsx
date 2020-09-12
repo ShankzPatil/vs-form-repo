@@ -38,7 +38,7 @@ class VsGrid extends React.Component<IGridProps, {}> {
     if (this.props.container) {
       this.gridProps.container = true
       if (!this.gridProps.spacing) {
-        this.gridProps.spacing = 16
+        this.gridProps.spacing = 1
       }
     } else {
       this.gridProps.item = true

@@ -19,7 +19,7 @@ import SchemaManager from './schemaManager'
 
 export const rootIsWrong: IValidatorSchema = sm => {
   const comp = sm.schema.components.root as IComponentPanel
-  if ([enums.Component.form, enums.Component.panel, enums.Component.card, enums.Component.expansionpanel, enums.Component.tabs].indexOf(comp.type) === -1) {
+  if ([enums.Component.form, enums.Component.panel, enums.Component.card, enums.Component.accordion, enums.Component.tabs].indexOf(comp.type) === -1) {
     return { errcode: errs.ErrorCode.rootnotContainer, schemaName: sm.schema.name }
   }
   if (comp.children && isArray(comp.children) && comp.children.length === 0) {

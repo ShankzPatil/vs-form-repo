@@ -3,7 +3,7 @@ const dynamic = `import { Component, DataType } from '@vs-form/vs-form';
 const schema = {
     components: {
         root: {
-            type: Component.expansionpanel,
+            type: Component.accordion,
             label: 'Change props dynamically',
             children: ['textChange1', 'textChange2', 'divider1', 'staticText1', 'staticText2', 'buttonChangeProp1', 'buttonChangeProp2', 'divider2', 'clbShowHide', 'panelShowHide'],
             expanded: true

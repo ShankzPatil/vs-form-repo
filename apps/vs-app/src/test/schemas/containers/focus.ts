@@ -30,7 +30,7 @@ const schema: ISchemaDesign = {
       data: { field: 'sel1', dataType: DataType.string, items: [] }
     },
     exp1: {
-      type: Component.expansionpanel,
+      type: Component.accordion,
       label: 'exp1',
       children: ['cb', 'date'],
       expanded: true

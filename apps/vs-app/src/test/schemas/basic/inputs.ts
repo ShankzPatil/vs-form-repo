@@ -18,7 +18,7 @@ const schema: ISchemaDesign = {
       children: ['cardvariants', 'cardmultiline', 'cardprefix', 'cardMasks', 'cardProps'],
     },
     cardvariants: {
-      type: Component.expansionpanel,
+      type: Component.accordion,
       label: 'Input Variants',
       children: ['normalInput', 'outlinedInput', 'filledInput', 'disabledInput'],
       props: {
@@ -77,7 +77,7 @@ const schema: ISchemaDesign = {
       tooltip: 'Tooltip for Input',
     },
     cardmultiline: {
-      type: Component.expansionpanel,
+      type: Component.accordion,
       label: 'Multiline Inputs',
       children: ['normalInputMulti', 'outlinedInputMulti', 'filledInputMulti'],
       props: {
@@ -127,7 +127,7 @@ const schema: ISchemaDesign = {
       label: 'Filled multiline Input'
     },
     cardprefix: {
-      type: Component.expansionpanel,
+      type: Component.accordion,
       label: 'Prefix and Suffix',
       props: {
         expanded: true
@@ -192,7 +192,7 @@ const schema: ISchemaDesign = {
       icon: 'anchor'
     },
     cardMasks: {
-      type: Component.expansionpanel,
+      type: Component.accordion,
       label: 'Input Masks',
       props: {
         expanded: true
@@ -241,7 +241,7 @@ const schema: ISchemaDesign = {
       hint: 'text with mask as a function'
     },
     cardProps: {
-      type: Component.expansionpanel,
+      type: Component.accordion,
       label: 'Change props dynamically',
       children: ['textChange1', 'textChange2', 'divider1', 'staticText1', 'staticText2', 'buttonChangeProp1', 'buttonChangeProp2', 'divider2', 'clbShowHide', 'panelShowHide', 'divider3', 'textChanging']
     },

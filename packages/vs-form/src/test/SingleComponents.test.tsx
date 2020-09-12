@@ -20,6 +20,7 @@ const generateClassName = (rule: any, styleSheet: any) =>
 // reduce size of snapshot file
 const delProps = (wrapper: ReactWrapper) => {
   wrapper.findWhere((n) => n.length > 0 && n.prop('node') !== '____').forEach((child) => {
+    delete child.props().name
     delete child.props().schema
     delete child.props().schemaManager
     delete child.props().comp

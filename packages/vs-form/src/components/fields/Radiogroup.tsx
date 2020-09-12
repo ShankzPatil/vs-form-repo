@@ -51,15 +51,20 @@ export default class VsRadioGroup extends React.Component<ItemProps> {
     const items = this.comp.data.items as types.ISelectItemList
     return items.map((item, ind) => {
       // todo style ausserhalb
-      return <FormControlLabel inputRef={ind === 0 && this.inputRef} value={item.value.toString()} key={item.value} control={<Radio {...this.RadioProps} />} label={item.text} {...this.FormControlLabelProps} />
+      if (ind === 0) {
+        return <FormControlLabel inputRef={this.inputRef} value={item.value.toString()} key={item.value} control={<Radio {...this.RadioProps} />} label={item.text} {...this.FormControlLabelProps} />
+      } else {
+        return <FormControlLabel value={item.value.toString()} key={item.value} control={<Radio {...this.RadioProps} />} label={item.text} {...this.FormControlLabelProps} />
+      }
     })
   }
 
   public getValue(value: any): any {
-    return (isUndefined(value) || isNull(value)) ?  '' : value.toString()
+    return (isUndefined(value) || isNull(value)) ? '' : value.toString()
   }
 
-  public changeValue = (dataProps: ItemDataProps) => (_evt: React.ChangeEvent<{}>, value: string) => {
+  public changeValue = (dataProps: ItemDataProps) => (evt: React.ChangeEvent<HTMLInputElement>) => {
+    const value = evt.target.value
     const schemaValue = this.comp.data.dataType === enums.DataType.number ? toNumber(value) : value
     dataProps.updateValue(value, schemaValue)
   }
@@ -67,12 +72,15 @@ export default class VsRadioGroup extends React.Component<ItemProps> {
   private initProps() {
 
     const { FormControlProps, FormHelperTextProps, FormLabelProps, RadioProps, FormControlLabelProps, ...RadioGroupProps } = this.comp.props!
+
     if (RadioGroupProps) {
       this.RadioGroupProps = RadioGroupProps
     }
+
     if (RadioProps) {
       this.RadioProps = RadioProps
     }
+
     if (FormControlLabelProps) {
       this.FormControlLabelProps = FormControlLabelProps
     }

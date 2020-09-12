@@ -5,9 +5,9 @@ import { RadioProps } from '@material-ui/core/Radio'
 
 import { CheckboxProps } from '@material-ui/core/Checkbox'
 import { SwitchProps } from '@material-ui/core/Switch'
-import { ExpansionPanelProps } from '@material-ui/core/ExpansionPanel'
-import { ExpansionPanelSummaryProps } from '@material-ui/core/ExpansionPanelSummary'
-import { ExpansionPanelDetailsProps } from '@material-ui/core/ExpansionPanelDetails'
+import { AccordionProps } from '@material-ui/core/Accordion'
+import { AccordionSummaryProps } from '@material-ui/core/AccordionSummary'
+import { AccordionDetailsProps } from '@material-ui/core/AccordionDetails'
 
 import { TabsProps } from '@material-ui/core/Tabs'
 import { AppBarProps } from '@material-ui/core/AppBar'
@@ -29,7 +29,7 @@ import { CardProps } from '@material-ui/core/Card'
 import { CardHeaderProps } from '@material-ui/core/CardHeader'
 import { CardContentProps } from '@material-ui/core/CardContent'
 import { GridProps } from '@material-ui/core/Grid'
-import { SliderProps } from '@material-ui/lab/Slider'
+import { SliderProps } from '@material-ui/core/Slider'
 import { SpeedDialActionProps } from '@material-ui/lab/SpeedDialAction'
 import { SpeedDialProps } from '@material-ui/lab/SpeedDial'
 import { TooltipProps } from '@material-ui/core/Tooltip'
@@ -288,12 +288,12 @@ export interface IComponentCard extends ICommonProps, ICommonContainerProps {
   props?: ICardProps
 }
 
-export interface IComponentExpansionPanel extends ICommonProps, ICommonContainerProps {
-  type: enums.Component.expansionpanel,
+export interface IComponentAccordion extends ICommonProps, ICommonContainerProps {
+  type: enums.Component.accordion,
   expanded?: boolean,
   onBeforeChange?: IExpPanelBeforeChangeEvent,
   onChange?: IExpPanelChangedEvent,
-  props?: IExpansionPanelProps
+  props?: IAccordionProps
 }
 
 export interface IComponentTabs extends ICommonProps, ICommonLabelOptionalProps {
@@ -356,7 +356,7 @@ export interface IComponentCustom extends ICommonProps {
 }
 
 export type IComponent =
-  IComponentForm | IComponentPanel | IComponentTab | IComponentCard | IComponentExpansionPanel | IComponentTabs | IComponentTextInput | IComponentMaskInput |
+  IComponentForm | IComponentPanel | IComponentTab | IComponentCard | IComponentAccordion | IComponentTabs | IComponentTextInput | IComponentMaskInput |
   IComponentSelect | IComponentSelectExt | IComponentRadioGroup | IComponentChecklistbox | IComponentNumber | IComponentInteger | IComponentSlider | IComponentNumberFormat | IComponentCheckbox | IComponentSwitch |
   IComponentDate | IComponentDateExt | IComponentSubschema |
   IComponentText | IComponentButton | IComponentIconButton | IComponentSpeediDial | IComponentIcon | IComponentDivider | IComponentMediaStatic | IComponentCustom
@@ -616,9 +616,9 @@ export interface IRadioGroupProps extends RadioGroupProps, IBaseFormControlProps
   RadioProps?: RadioProps
 }
 
-export interface IExpansionPanelProps extends ExpansionPanelProps {
-  ExpansionPanelSummaryProps?: ExpansionPanelSummaryProps,
-  ExpansionPanelDetailsProps?: ExpansionPanelDetailsProps
+export interface IAccordionProps extends AccordionProps {
+  AccordionSummaryProps?: AccordionSummaryProps,
+  AccordionDetailsProps?: AccordionDetailsProps
   TypographyProps?: TypographyProps
   IconProps?: IconProps
 }

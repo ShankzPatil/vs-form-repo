@@ -37,14 +37,14 @@ const schema: ISchemaDesign = {
       children: ['exp']
     },
     exp: {
-      type: Component.expansionpanel,
+      type: Component.accordion,
       children: ['exp1'],
-      label: 'Expansion Panel',
+      label: 'Accordion',
     },
     exp1: {
-      type: Component.expansionpanel,
+      type: Component.accordion,
       children: ['text1'],
-      label: 'Expansion Panel',
+      label: 'Accordion',
     },
     text2: {
       type: Component.textinput,

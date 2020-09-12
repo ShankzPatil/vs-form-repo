@@ -60,8 +60,8 @@ export const getRegisteredComponent = async (type: Component, name?: string) => 
     imp = await import('./components/containers/Tab')
   } else if (type === Component.card) {
     imp = await import('./components/containers/Card')
-  } else if (type === Component.expansionpanel) {
-    imp = await import('./components/containers/ExpansionPanel')
+  } else if (type === Component.accordion) {
+    imp = await import('./components/containers/Accordion')
   } else if (type === Component.subschema) {
     imp = await import('./components/containers/Subschema')
     // fields
@@ -114,7 +114,7 @@ export const getRegisteredComponent = async (type: Component, name?: string) => 
 //   [Component.tabs]: VsVsTabs.VsTabs,
 //   [Component.tab]: VsPanel,
 //   [Component.subschema]: VsSubschema,
-//   [Component.expansionpanel]: VsExpansionPanel.VsExpansionPanel,
+//   [Component.accordion]: VsAccordion.VsAccordion,
 //   // fields
 //   [Component.textinput]: VsTextInput,
 //   [Component.number]: VsNumber,
