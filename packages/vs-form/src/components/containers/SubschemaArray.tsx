@@ -38,6 +38,7 @@ export interface ISubschemaArrayState {
   data: object[],
   page: number,
   rowsPerPage: number,
+  rowsPerPageOptions: number[],
   errors: types.IValidationErrorList,
 }
 
@@ -61,6 +62,7 @@ export default class SubSchemaArray extends React.Component<ItemProps, ISubschem
       data,
       page: 0,
       rowsPerPage: comp.rowsPerPage || 5,
+      rowsPerPageOptions: comp.rowsPerPageOptions || [10, 25, 50, 100],
       errors: this.props.schemaManager.validateValueComp(this.props.comp, data),
     }
   }
@@ -190,9 +192,9 @@ export default class SubSchemaArray extends React.Component<ItemProps, ISubschem
   public updateValue = (): boolean => {
     // let errors: types.IValidationErrorList = []
     // if (this.props.schemaManager.schema.validationMethod === enums.ValidationMethod.validateOnChange) {
-    this.props.schemaManager.updateSchemaValue(this.props.comp, this.state.data)
-    const errors = this.props.schemaManager.getValueErrorsComp(this.props.comp, this.props.arrayId)
-    this.setState({ errors })
+    const errors = this.props.schemaManager.validateValueComp(this.props.comp, this.state.data)
+    this.setState({ errors });
+    this.props.schemaManager.validateValuesSchema();
     // }
     return errors.length === 0
   }
@@ -202,8 +204,9 @@ export default class SubSchemaArray extends React.Component<ItemProps, ISubschem
   }
 
   public showTable = () => {
-    this.updateValue()
-    this.setState({ showForm: false })
+    if (this.updateValue()) {
+      this.setState({ showForm: false })
+    }
   }
 
   public isSelected = (id: number) => this.state.selected.indexOf(id) !== -1
@@ -363,6 +366,7 @@ export default class SubSchemaArray extends React.Component<ItemProps, ISubschem
         component="div"
         count={this.state.data.length}
         rowsPerPage={this.state.rowsPerPage}
+        rowsPerPageOptions={this.state.rowsPerPageOptions}
         page={this.state.page}
         onChangePage={this.handleChangePage}
         onChangeRowsPerPage={this.handleChangeRowsPerPage}

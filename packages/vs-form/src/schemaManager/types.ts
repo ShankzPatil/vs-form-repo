@@ -260,6 +260,7 @@ export interface IComponentSubschema extends ICommonProps, ICommonLabelOptionalP
   keyField?: string,
   columnSettings?: IDataTableColumnSettings,
   rowsPerPage?: number,
+  rowsPerPageOptions?: number[],
   hidePagination?: boolean
   props?: IObj
 }
