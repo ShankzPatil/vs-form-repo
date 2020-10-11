@@ -1,6 +1,6 @@
 {
   "name": "vs-form-mui-4x",
-  "version": "4.1.6",
+  "version": "4.1.7",
   "description": "A schema-based form generator component for React using material-ui 4.x",
   "main": "dist/index.js",
   "module": "dist/es/index.js",
