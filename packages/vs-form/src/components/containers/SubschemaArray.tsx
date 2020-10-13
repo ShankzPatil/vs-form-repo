@@ -240,7 +240,7 @@ export default class SubSchemaArray extends React.Component<ItemProps, ISubschem
   }
 
   public handleChangeRowsPerPage = (event: any) => {
-    this.setState({ rowsPerPage: event.target.value })
+    this.setState({ rowsPerPage: parseInt(event.target.value, 10), page: 0 })
   }
 
   public updateSort = (comp: types.IComponent) => () => {
